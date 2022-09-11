@@ -7,6 +7,15 @@
   text-align: center;
 }
 
+.poster-header,
+.poster,
+.figure__logos,
+.nav__lis,
+.btn__action {
+  display: flex;
+  flex-direction: column;
+}
+
 .poster-header {
   width: inherit;
   margin: 0 auto;
@@ -14,19 +23,15 @@
   background-image: url(/images/bg-header-desktop.png);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-position: top; */
 }
+
 .poster__figure {
   width: 180px;
 }
 .poster {
   width: 100vw;
-  display: flex;
-  flex-direction: column;
 }
 
 .poster__title,
@@ -51,8 +56,6 @@
 }
 
 .btn__action {
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -76,8 +79,6 @@
 }
 
 .figure__logos {
-  display: flex;
-  flex-direction: column;
   width: 350px;
   margin: 0 auto;
   align-items: center;
@@ -99,6 +100,7 @@
   margin: 0 auto;
   padding: 40px 10px 0px;
   background: hsl(201, 11%, 95%);
+  text-align: center;
 }
 
 .footer__figure {
@@ -114,9 +116,6 @@
 .nav__list {
   width: 100%;
   padding: 0;
-
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
@@ -126,21 +125,38 @@
   color: var(--neutral-Grayish-Blue);
 }
 
-.figure__icons {
-  display: flex;
-  width: 20px;
+.footer__icons{
+  display:flex ;
   justify-content: center;
   gap: 1.5rem;
+
+}
+.figure__icons {
+  margin: 0;
+  width: 20px;
 }
 
-@media (min-width: 90em) {
+@media (min-width: 75em) {
   .poster-header {
     background-image: url(/images/bg-header-desktop.png);
   }
 
+  .poster-header {
+    justify-content: flex-end;
+  }
+  .poster {
+    justify-content: flex-end;
+    height: 45vh;
+    margin-bottom: 20rem;
+  }
+
+  .copy {
+    font-size: 1.3rem;
+  }
+
   .poster__title,
   .poster__copy {
-    width: 600px;
+    width: 800px;
   }
 
   .btn__action {
@@ -155,7 +171,9 @@
   .info__copy {
     width: 600px;
   }
-
+  .info__copy {
+    margin-bottom: 5rem;
+  }
   .info__center {
     display: flex;
     gap: 5rem;
@@ -181,30 +199,40 @@
   }
 
   .logos {
-    display: flex;
-    flex-direction: row;
-    margin: 6 rem 0;
-  }
-
-  #footer {
     height: 200px;
     display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-  #footer-icons {
-    width: 600px;
-    padding-top: 4rem;
+    flex-direction: row;
+    margin: 6rem 0;
+    align-items: center;
   }
 
+  .call-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__main {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer__icons {
+    width: 600px;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  }
+  
   .footer__figure {
     width: 400px;
     height: 60px;
-
     margin: 10px;
   }
 
   .nav__list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
